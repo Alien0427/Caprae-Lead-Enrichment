@@ -1,45 +1,52 @@
+
+
+````markdown
 # Caprae Lead QA Tool
 
 ## Overview
-Caprae Lead QA Tool discovers, enriches, and qualifies B2B companies so sales teams can prioritize high-impact leads.  
-"Great Founders Working with Great Founders."
+The Caprae Lead QA Tool discovers, enriches, and qualifies B2B companies so sales teams can prioritize high-impact leads faster.
 
-### Core Capabilities
-1. **Company Discovery** – Google CSE & Bright Data scrape candidate companies by *industry* & *location*.
-2. **Data Enrichment** – Firecrawl, HubSpot, Proxycurl, Bright Data APIs provide employees, revenue, HQ, etc.
-3. **LLM Insights** – Google Gemini-pro scores lead fit (Green/Yellow/Red) and Buy-Intent (High/Medium/Low) with rationale.
-4. **Contact Extraction** – Regex over website summaries for phone & email.
-5. **Visual Analytics** – Streamlit charts on scores, revenue, employee counts, industries, missing-data heatmap.
-6. **Sales Playbook** – 1-click Gemini prompt returns pitch strategy, ice-breakers, objections, best contact time.
-7. **Exports** – CSV download & Google-Sheets push.
+> “Great Founders Working with Great Founders.”
 
 ---
-## Setup
+
+### 🔑 Core Capabilities
+1. **Company Discovery** – Uses Google CSE & Bright Data to find target companies by *industry* & *location*.
+2. **Data Enrichment** – Firecrawl, HubSpot, Proxycurl, and Bright Data APIs extract employee size, revenue, HQ, funding stage, etc.
+3. **LLM Insights** – Gemini Pro scores each lead (Green/Yellow/Red) and estimates Buy-Intent (High/Medium/Low) with rationale.
+4. **Contact Extraction** – Regex + scraping parses emails & phone numbers from web snippets.
+5. **Visual Analytics** – Interactive Streamlit charts: score breakdown, industry histograms, missing-data pie, and more.
+6. **Sales Playbook Generator** – One-click Gemini prompt returns custom pitch, icebreaker, objections, and ideal contact timing.
+7. **Exports** – Download as CSV or push directly to Google Sheets.
+
+---
+
+## ⚙️ Setup Instructions
+
 ```bash
-# clone repo
-$ git clone https://github.com/<your-org>/caprae-lead-qa.git
-$ cd caprae-lead-qa
+# Clone the repo
+git clone https://github.com/caprae/caprae-new.git
+cd caprae_new
 
-# (optional) virtual env
-$ python -m venv venv
-$ source venv/bin/activate  # Windows: venv\Scripts\activate
+# (optional) create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# install deps
-$ pip install -r requirements.txt
+# Install dependencies
+pip install -r requirements.txt
 
-# add env vars
-$ cp .env.example .env
-$ nano .env  # paste your API keys
+# Add your API keys
+cp .env.example .env
+nano .env  # or use any editor to paste in your keys
 
-# run
-$ streamlit run app.py  # default on :8501
-```
-If :8501 is busy:
-```bash
-streamlit run app.py --server.port 8502
-```
+# Run the app
+streamlit run app.py  # defaults to http://localhost:8501
+````
 
-### Required Environment Variables
+---
+
+### 🔐 Required Environment Variables
+
 ```
 GEMINI_API_KEY=
 GOOGLE_CSE_API_KEY=
@@ -49,35 +56,51 @@ FIRECRAWL_API_KEY=
 PROXYCURL_API_KEY=
 HUBSPOT_API_KEY=
 ```
-*(Create `.env` or export vars in shell.)*
+
+→ Save these in `.env` or export them directly into your terminal session.
 
 ---
-## Project Structure
+
+## 🗂️ Project Structure
+
 ```
-├── app.py              # Streamlit UI + orchestration
-├── api_clients.py      # Thin wrappers for external APIs
-├── qa_logic.py         # Heuristic fallback scoring
-├── README.md           # ← you are here
-├── REPORT.md           # 1-page technical report
-├── requirements.txt    # Python deps
-└── .env.example        # list of needed env keys
+├── app.py              # Streamlit UI and orchestration
+├── api_clients.py      # Modular wrappers for external APIs
+├── qa_logic.py         # Heuristic fallback scoring logic
+├── README.md           # ← this file
+├── REPORT.md           # One-page technical report (PDF/Markdown)
+├── requirements.txt    # Python dependencies
+└── .env.example        # Template for environment variables
 ```
 
 ---
-## Quick Demo
-1. Open the web app.
-2. Enter *Industry* (e.g., "fin-tech"), *Location* (e.g., "California"), press **Search Companies**.
-3. Scroll the results table; click **Generate Playbook** for any row.
-4. Export via **CSV** or **Google Sheets**.
+
+## 🚀 Quick Demo
+
+1. Launch the app in browser.
+2. Enter *Industry* (e.g., “fin-tech”) and *Location* (e.g., “California”).
+3. Click **Search Companies**.
+4. Review enriched leads with AI-powered scoring.
+5. Click **Generate Playbook** to get a customized outreach strategy.
+6. Export data to CSV or Google Sheets with one click.
 
 ---
 
+## 🔒 License
+
+**Proprietary – for internal use only by Caprae Capital Partners.**
+See `LICENSE` file for details.
 
 ---
-## License
-Proprietary – for internal use only by **Caprae Capital Partners**. See `LICENSE` file.
 
+## 🧠 Tip for Devs
+
+If you're working locally, include this in `app.py` for env loading:
+
+```python
 from dotenv import load_dotenv
 load_dotenv()
+```
 
+---
 
