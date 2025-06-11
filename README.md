@@ -9,7 +9,7 @@ The Caprae Lead QA Tool discovers, enriches, and qualifies B2B companies so sale
 
 ---
 
-### 🔑 Core Capabilities
+### Core Capabilities
 1. **Company Discovery** – Uses Google CSE & Bright Data to find target companies by *industry* & *location*.
 2. **Data Enrichment** – Firecrawl, HubSpot, Proxycurl, and Bright Data APIs extract employee size, revenue, HQ, funding stage, etc.
 3. **LLM Insights** – Gemini Pro scores each lead (Green/Yellow/Red) and estimates Buy-Intent (High/Medium/Low) with rationale.
@@ -20,7 +20,7 @@ The Caprae Lead QA Tool discovers, enriches, and qualifies B2B companies so sale
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ```bash
 # Clone the repo
@@ -44,7 +44,7 @@ streamlit run app.py  # defaults to http://localhost:8501
 
 ---
 
-### 🔐 Required Environment Variables
+### Required Environment Variables
 
 ```
 GEMINI_API_KEY=
@@ -60,7 +60,7 @@ HUBSPOT_API_KEY=
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 ├── app.py              # Streamlit UI and orchestration
@@ -74,7 +74,7 @@ HUBSPOT_API_KEY=
 
 ---
 
-## 🚀 Quick Demo
+## Quick Demo
 
 1. Launch the app in browser.
 2. Enter *Industry* (e.g., “fin-tech”) and *Location* (e.g., “California”).
@@ -85,14 +85,14 @@ HUBSPOT_API_KEY=
 
 ---
 
-## 🔒 License
+## License
 
 **Proprietary – for internal use only by Caprae Capital Partners.**
 See `LICENSE` file for details.
 
 ---
 
-## 🧠 Tip for Devs
+## Tip for Devs
 
 If you're working locally, include this in `app.py` for env loading:
 
