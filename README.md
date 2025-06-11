@@ -1,6 +1,5 @@
 
 
-````markdown
 # Caprae Lead QA Tool
 
 ## Overview
@@ -71,7 +70,7 @@ HUBSPOT_API_KEY=
 ├── REPORT.md           # One-page technical report (PDF/Markdown)
 ├── requirements.txt    # Python dependencies
 └── .env.example        # Template for environment variables
-```
+
 
 ---
 
