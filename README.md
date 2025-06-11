@@ -2,6 +2,9 @@
 
 [Watch the detailed explanation of the working of the website and product](https://youtu.be/GY-Mxgnl0-E?si=-MWEBv44a3LLNgYr)
 
+![image](https://github.com/user-attachments/assets/1e53613c-430b-4292-81c4-5365e525289d)
+
+
 # Caprae Lead QA Tool
 
 ## Overview
